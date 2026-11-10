@@ -1,0 +1,14 @@
+{
+  "name": "small-web",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:api": "npm run start:dev -w @small-web/api",
+    "dev:web": "npm run dev -w @small-web/web",
+    "seed": "npm run seed -w @small-web/api",
+    "build": "npm run build -w @small-web/api && npm run build -w @small-web/web",
+    "mongo": "docker compose up -d"
+  }
+}
